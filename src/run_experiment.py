@@ -31,6 +31,13 @@ def main():
 
     print(results)
 
+    results.to_csv(
+        "results/experiment_centre_wise_c_index.csv",
+        index=False
+    )
+
+    print("Results saved to results/experiment_centre_wise_c_index.csv")
+
 
 if __name__ == "__main__":
     main()
