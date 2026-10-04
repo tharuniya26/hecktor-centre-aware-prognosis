@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 from survival_model import leave_one_centre_out_evaluation
 
 
@@ -50,6 +50,24 @@ def main():
     )
 
     print("Summary saved to results/experiment_summary_metrics.csv")
+    results.plot(
+        x="held_out_centre",
+        y="c_index",
+        kind="bar",
+        legend=False
+    )
 
+    plt.ylabel("C-index")
+    plt.title("Held-out Centre Performance")
+    plt.ylim(0, 1)
+
+    plt.savefig(
+        "results/experiment_centre_wise_c_index.png",
+        bbox_inches="tight"
+    )
+
+    plt.close()
+
+    print("Plot saved to results/experiment_centre_wise_c_index.png")
 if __name__ == "__main__":
     main()
