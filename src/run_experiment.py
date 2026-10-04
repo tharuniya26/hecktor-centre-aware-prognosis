@@ -37,7 +37,19 @@ def main():
     )
 
     print("Results saved to results/experiment_centre_wise_c_index.csv")
+    summary = pd.DataFrame([{
+        "mean_c_index": results["c_index"].mean(),
+        "std_c_index": results["c_index"].std(),
+        "min_c_index": results["c_index"].min(),
+        "max_c_index": results["c_index"].max()
+    }])
 
+    summary.to_csv(
+        "results/experiment_summary_metrics.csv",
+        index=False
+    )
+
+    print("Summary saved to results/experiment_summary_metrics.csv")
 
 if __name__ == "__main__":
     main()
