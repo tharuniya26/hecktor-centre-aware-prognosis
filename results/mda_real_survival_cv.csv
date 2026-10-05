@@ -1,2 +1,2 @@
-dataset,patients,features,validation,mean_c_index
-MDA clinical,156,"Age, Sex, HPV status",5-fold cross-validation,0.6167573802704178
+dataset,patients,features,validation,seed,mean_c_index
+MDA clinical,156,"Age, Sex, HPV status",5-fold cross-validation,42,0.6154980348808646

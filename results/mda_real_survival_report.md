@@ -15,11 +15,11 @@
 
 ## Result
 
-- Mean cross-validated C-index: 0.617
+- Mean cross-validated C-index: 0.615
 
 ## Interpretation
 
-The model achieved a mean C-index of approximately 0.617.
+The model achieved a mean C-index of approximately 0.615.
 
 This indicates modest predictive performance using only three clinical variables.
 
